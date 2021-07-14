@@ -1,0 +1,37 @@
+.box-container {
+    width: 100px;
+    height: 100px;
+    background-color: darkcyan;
+}
+
+.box-container .box {
+    width: 50px;
+    height: 50px;
+    background-color: darkkhaki;
+}
+
+.box-container:hover .box {
+    background-color: cyan;
+    border-radius: 20px;
+}
+
+.box-container.second:hover .box {
+    background-color: blue;
+}
+
+.box-container-second {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.box-container-second .box {
+    width: 50px;
+    height: 50px;
+    background-color: burlywood;
+}
+
+.box-container-second .box:hover {
+    background-color: white;
+    border-radius: 20px;
+}

@@ -1,0 +1,94 @@
+.img-container {
+    position: relative;
+}
+
+@keyframes float {
+ from {
+    top: -20px;
+ }
+ 
+ to {
+    top: 20;
+ }
+}
+
+@keyframes float {
+ 0% {
+    top: -20px;
+ }
+
+ 50% {
+     top: 20px
+ }
+ 
+ 100% {
+    top: -20;
+ }
+}
+
+@keyframes fadeIn {
+ from {
+    opacity: 0;
+ }
+ 
+ to {
+    opacity: 1;
+ }
+}
+
+@keyframes moveRight {
+ from {
+    left: 0;
+ }
+ 
+ to {
+    left: 100px;
+ }
+}
+
+.img-1 {
+    position: absolute;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.img-2 {
+    position: absolute;
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+.img-3 {
+    position: absolute;
+    animation-name: moveRight;
+    animation-duration: 3s;
+}
+.img-4 {
+    position: absolute;
+    width: 400px;
+    left: 630px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
+    animation-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715)
+}
+.img-5 {
+    position: absolute;
+    width: 450px;
+    left: 480px;
+    top: 440px;
+}
+.img-6 {
+    position: absolute;
+    width: 470px;
+    left: 590px;
+    top: 440px;
+}
+.img-7 {
+    position: absolute;
+}
+.img-8 {
+    position: absolute;
+}

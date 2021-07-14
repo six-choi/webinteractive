@@ -1,0 +1,21 @@
+.button{
+    display: inline-block;
+    background-color: blue;
+    color: cornsilk;
+
+    margin: 10px;
+    margin-top: 10px;
+
+
+    padding: 20px;
+
+    border-radius: 10px;
+    transition-property: background-color;
+    transition-duration: 3s;
+}
+
+.button:hover {
+    background-color: cyan;
+    font-size: 18px;
+    border-radius: 20px;
+}
