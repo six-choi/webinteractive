@@ -1,4 +1,5 @@
-[웹 디자인 1](#step1)
+[웹 디자인 1주차](#step1)
+[웹 디자인 2주차](#step2)
 
 
 
@@ -103,3 +104,197 @@ https://www.youtube.com/watch?v=BKorP55Aqvg
 css position relative는 박스가 상대적.
 top - bottom, left-right 둘다 작용되지 않고 둘중 하나만 사용가능
 ```
+
+---
+step2 
+
+step2
+
+복습
+
+position - absoulte 
+
+* 아이폰이 가진 고유 크기를 맞출때 쓰일 수도 있음. 
+* 하지만 가장 많이 써보면 좋은 것은 이미지 편집. 
+
+
+day2 
+
+**웹 콘텐츠의 90%는 이미지!**
+작고 귀여운 인터랙티브 클론하기 
+
+https://www.nytimes.com/paidpost/allbirds/the-view-from-above.html
+
+![](https://i.imgur.com/bKSUzrd.jpg)
+
+시작과 끝 지점의 변화량 차이는 몇 px이다. 
+
+**css animation의 기본**
+
+```
+@keyframes fadeIn {
+ from {
+    opacity: 0;
+ }
+ 
+ to {
+    opacity: 1;
+ }
+}
+
+opacity, left 등을 사용해서 이용.
+```
+
+네모를 세밀하게 그리는 것처럼 세밀하게 적용해주어야 한다. 
+css 애니메이션
+http://www.tcpschool.com/css/css3_transform_animation
+css 애니메이션 세밀 적용
+https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+
+애니메이션 심화 
+* ,를 사용해서 두개의 애니메이션을 한번에 적용 가능
+* delay 기능은 opacity 기능을 늦게 가져감. 
+
+* 설계를 잘 해봅시다
+
+css 값을 0에서 1로 끝난 상태로 고정하고 싶다면
+```
+animation-fill-mode: forward;
+```
+
+
+볼만한 css
+https://codepen.io/hakimel/pen/aIhkf
+
+---
+버튼과 패딩 그리고 마진
+패딩은 순서대로 표기 - 위 오른쪽 아래 왼쪽
+패딩을 2개만 사용하면 1 = 아래 위, 2는 왼쪽 오른쪽
+
+주황색은 마진, 초록색은 패딩 
+
+```
+.button{
+    display: inline-block;
+    background-color: blue;
+    color: cornsilk;
+
+    margin: 10px;
+    margin-top: 10px;
+
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: cyan;
+    font-size: 18px;
+    border-radius: 20px;
+}
+```
+
+인터랙션 하기 = transition
+* 시작과 끝이 정해져 있음. 
+* transition-property: backgrounf-color;
+* property는 주소가 있을때 
+* div에 마우스를 올렸을때 hover을 통해서 인터랙션을 사용할 수 있음. 
+* 호버된 상태를 보고 싶으면 개발자 도구에서 호버를 체크하면 됨
+
+애니매이션을 사용하는 것은 사용자의 동작과 상관없이 움직여야 할 때
+호버는 사용자의 동작에 반응할 때
+
+호버는 자식 선택자를 컨트롤 할 수 있다. 
+부모 클래스에 마우스를 올리면 자식 클래스의 css가 변한다. 
+
+```
+.box-container {
+    width: 100px;
+    height: 100px;
+    background-color: darkcyan;
+}
+
+.box-container .box {
+    width: 50px;
+    height: 50px;
+    background-color: darkkhaki;
+}
+
+.box-container:hover .box {
+    background-color: cyan;
+    font-size: 18px;
+    border-radius: 20px;
+    
+.box-container.second:hover .box {
+    background-color: blue;
+}
+= .second = 형제도 함께 컨트롤 하기 
+```
+---
+응용하기 
+https://www.nextree.co.kr/p8468/
+
+메뉴 바 만들기
+
+뉴모티즘 - 엠비씨 기획취재팀 인터랙티브 디자인 모티프
+https://ldrerin.tistory.com/467 - 뉴모티즘
+
+개발과 디자인을 이해할 수 있는 사람. 개발과 디자인을 동시에 한다면 찾는 사람이 많아질 것. 
+
+일반적인 회사는 개발과 디자인이 분리되어있음. 어떻게 보면 이상적이라고 생각할 수 있는데. 연구원은 css 규칙과 디자인 문법을 어떻게 설정할 것인지 정리할 수 있는 사람이 높은 레벨에서 환영을 받음. 
+
+---
+jquery
+현업에서는 별로 사용하지 않는 라이브러리
+html = 마크업, css = 스타일, js = 
+
+```
+console.log("ready")
+
+//.my-btn버튼을 누르면 .box의 background-color이 green으로 바꾸게 하자
+
+$(document).ready(function () {
+    //도큐먼트가 준비되면 실행해라. 
+    //이것을 적어줘야 하는 이유는 로딩이 느릴 경우에는 랜더링 되기 전에 먼저 js가 실행이 될 수 있음.
+    //버튼 클릭시 아무 일도 일어나지 않아서 html 도큐멘트가 준비 되었을때 실행을 하라는 것.
+
+$(".my-btn").on("click", function () {
+    console.log("my-btn clicked")
+    $(".box").css("background-color", "green")
+    $(".box").css("margin-left", "400px")
+     $(".box").animate({
+        width: "toggle",
+        height: "toggle",
+    }, 1000);
+   })
+})
+
+// .box의 css background-color을 green으로 바꿔라
+
+//css를 여기서도 바꿀 수 있지 않을까. 정답!
+```
+
+add class
+remove class
+
+```
+$(document).ready(function () {
+    //도큐먼트가 준비되면 실행해라. 
+    //이것을 적어줘야 하는 이유는 로딩이 느릴 경우에는 랜더링 되기 전에 먼저 js가 실행이 될 수 있음.
+    //버튼 클릭시 아무 일도 일어나지 않아서 html 도큐멘트가 준비 되었을때 실행을 하라는 것.
+
+  $(".my-btn").on("click", function () {
+      console.log("my-btn clicked")
+      $('.box').addClass('active');
+    })
+
+     $(".my-btn-2").on("click", function () {
+      console.log("my-btn-2 clicked")
+      $('.box').removeClass('active');
+     }) 
+  })
+```
+괄호를 잘 닫아야 한다. 
+
+메뉴 만들고 디자인 해보기
