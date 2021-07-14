@@ -1,4 +1,4 @@
-#웹 디자인 1. 
+[웹 디자인 1]( https://github.com/six-choi/webinteractive/main/README.md/day1)
 
 추가학습 [링크](https://www.notion.so/FIT-JOB-1-31d73bbe848841b493dbfde856b1538c) 
 
