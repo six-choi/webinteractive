@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+/* important 지우세요!!! */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.font-ys {
+    font-family: 'Yeon Sung', cursive;
+}
+
+.font-garamond {
+    font-family: 'EB Garamond', serif;
+}
+
+.font-tourney {
+    font-family: 'Tourney', cursive;
+}
+
+.my-edit-style {
+    font-size: 14px;
+    line-height: 2em; /* 2em = 28px */
+    letter-spacing: 1px; /* 자간 - 상세페이지 상품을 보면 들어간 곳 밀도 올리기 */
+    word-break: keep-all; /* 단어가 깨지지 않는 선에서 줄바꿈 */
+}
+
+.repoter {
+    
+}
