@@ -1,0 +1,12 @@
+.drawing-object {
+    stroke-width: 500px;
+     stroke-dasharray: 1330;
+     stroke-dashoffset: 1330;
+     animation: path 5s;
+}
+
+@keyframes path {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
