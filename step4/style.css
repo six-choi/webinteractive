@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.my-box {
+  transition: all 0.2s ease-in;
+}
+.my-box:hover {
+  border-radius: 10px;
+}
+
+.my-button {
+  padding: 3px 8px;
+  border: 1px solid black;
+}
+.my-button-2 {
+  padding: 3px 8px;
+  border: 1px solid black;
+}
+
+.white-text {
+  color: white;
+}

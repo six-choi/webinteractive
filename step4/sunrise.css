@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.img {
+    position: absolute;
+    width: 120%;
+    transform: translate(-10%, 0);
+}
+
+.img-1 {
+    z-index: 5;
+    top: 320px;
+}
+
+.img-2 {
+    z-index: 4;
+    top: 264px;
+}
+
+.img-3 {
+    z-index: 3;
+    top: 238px;
+}
+
+.img-4 {
+    z-index: 2;
+    top: 227px;
+}
+
+.img-5 {
+    z-index: 1;
+    top: 0px;
+}
