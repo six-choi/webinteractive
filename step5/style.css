@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+html, body, body div, span, object, 
+iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, abbr, address, cite, 
+code, del, dfn, em, img, ins, kbd, q, samp, 
+small, strong, sub, sup, var, b, i, dl, dt, 
+dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, figure, footer, header, menu, nav, 
+section, time, mark, audio, video, details, summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root{
+    --color-red: #f00;
+    --color-green: #0f0;
+    --color-blue: #00f;
+    --color-white: #FFFFFF;
+    --color-grey: #e5e5e5;
+    --color-grey-bg: #ccc;
+    --size-1: 14.5vw;
+    --lineh-1: 0.8em;
+    --kerning-1: -0.2vw;
+    --size-2: 8.6vw;
+    --lineh-2: 0.85em;
+    --size-3-double: 1.8vw;
+    --lineh-3-double: 1em;
+    --size-3: 1.3vw;
+    --lineh-3: 1.1em;
+    --size-4: 0.9vw;
+    --lineh-4: 1.3em;
+    --size-5: 0.7vw;
+    --lineh-5: 1.2em;
+    --border-width: 2px;
+    --lineh-single: 1em;
+    --size-body: 0.9vw;
+    --font-family-article: 'SNR';
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    background-color: powderblue;
+    border-radius: 50%;
+    position: fixed;
+    left: 100px;
+
+    animation: circle 3s;
+    animation-iteration-count: infinite;
+}
+
+.box:hover {
+    background-color: plum;
+}
+
+@keyframes circle {
+        0%{
+            bottom: 0px;
+            animation-timing-function: ease-out;
+        }
+ 
+        50%{
+            bottom: 200px;
+            animation-timing-function: ease-in;
+        }
+
+         100%{
+             bottom: 0px;
+
+         }
+    }
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-bar {
+    background: #ff5454;
+    width: 0%;
+    height: 4px;
+}
+
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+}
+
+.title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 150px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 130px;
+    color: #ff5454;
+    margin: 0;
+    padding: 140px 30px 0 100px;
+    max-width: 1200px;
+    text-shadow: 6px 2px 2px gray;
+     cursor: url(http://charlielemaignan.com/public/assets/00-tools/FREELANCE.png) 50 0,auto;
+    text-align: left;
+}
+
+.row {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold 700;
+    font-size: 1vw;
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.calender_header {
+    font-size: 16.2vw;
+    line-height: 0.8em;
+    margin-bottom: 10px;
+    letter-spacing: -0.5vw;
+    text-transform: uppercase;
+    font-family: 'HelveticaNeue-CondensedBold';
+    overflow: hidden;
+    text-align: center;
+}
+
+.calender_description {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: var(--size-5-double);
+    line-height: 1em;
+    border: 0;
+    font-weight: bold;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: 'HelveticaNeue-Bold';
+    text-align: center;
+}
+
+#calender {
+    padding: 0 10px;
+    padding-bottom: 20px;
+}
+
+#calender.dsiafter:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.day-cell {
+    float: left;
+    width: 14.28%;
+    height: calc((100vh - 2vw - 40px) / 6);
+    font-family: 'HelveticaNeue-Bold';
+    padding: 10px;
+    position: relative;
+}
+
+.day-cell.header-cell {
+    text-transform: uppercase;
+    text-align: right;
+    padding: 5px 10px;
+    height: auto;
+    font-size: var(--size-5);
+}
+
+#calender .day-cell .day-date {
+    float: left;
+    text-align: right;
+    width: 1.5vw;
+    position: absolute;
+    top: 4px;
+    right: 11px;
+    font-size: var(--size-5);
+}
+
+#calender .day-cell .day-content {
+    float: left;
+    width: calc(100% - 1.5vw);
+    font-size: var(--size-5);
+    line-height: var(--lineh-5);
+}
+
+#calender .day-cell .day-content .type-green {
+    color: #0f0;
+}
+
+#calender .day-cell .day-content .type-red {
+    color: #f00;
+}
+
+#calender .day-cell .day-content .type-blue {
+    color: #00f;
+}
+
+#calender .day-cell .day-content .type-green .green-dot {
+    background-color: var(--color-green);
+    width: 0.5vw;
+    height: 0.5vw;
+    border-radius: 2em;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#calender .day-cell .day-content .type-red .red-dot {
+    background-color: var(--color-red);
+    width: 0.5vw;
+    height: 0.5vw;
+    border-radius: 2em;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#calender .day-cell .day-content .type-blue .blue-dot {
+    background-color: var(--color-blue);
+    width: 0.5vw;
+    height: 0.5vw;
+    border-radius: 2em;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.DSIplay_header {
+    font-size: 8.2vw;
+    line-height: 0.8em;
+    margin-bottom: 10px;
+    letter-spacing: -0.5vw;
+    text-transform: uppercase;
+    font-family: 'HelveticaNeue-CondensedBold';
+    overflow: hidden;
+    text-align: center;
+    background-color: #0f0;
+}
+
+.play_header {
+    font-size: 8.2vw;
+    line-height: 0.8em;
+    margin-bottom: 10px;
+    letter-spacing: -0.5vw;
+    text-transform: uppercase;
+    font-family: 'HelveticaNeue-CondensedBold';
+    overflow: hidden;
+    text-align: justify;
+    background-color: #0f0;
+}
+
+.bar {
+    width: 100%;
+    height: 0.3vw;
+    background-color: #000000;
+}
+
+.play_header.description {
+    font-size: 1.2vw;
+    line-height: 1em;
+    margin-bottom: 10px;
+    letter-spacing: 0vw;
+    text-transform: uppercase;
+    font-family: 'HelveticaNeue-CondensedBold';
+    overflow: hidden;
+    text-align: right;
+    background-color: #FFFFFF;
+}
+
+.footer {
+    background-color: #ff5454;
+    bottom: 0;
+    height: 384px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    transform: translateY(324px);
+    transition: transform .2s ease-in-out;
+    z-index: 100000;
+}
+
+.sbox {
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 64px;
+    padding: 16px;
+}
+
+.parti {
+    height: 15px;
+    padding-left: 10px;
+}
+
+.library {
+    height: 20px;
+    padding-left: 10px;
+}
+
+.yonsei {
+    height: 20px;
+    padding-left: 10px;
+}
